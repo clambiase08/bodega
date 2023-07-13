@@ -11,7 +11,7 @@ function handleClick() {
             <img src={item.image}></img>
             <h3>{item.name}</h3>
             <h4>${item.price}</h4>
-            <button onClick={() => console.log("Deleting the item...")}>Delete</button>
+            <button onClick={handleClick}>Delete</button>
         </div>
     );
 }

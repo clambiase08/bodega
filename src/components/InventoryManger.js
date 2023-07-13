@@ -17,11 +17,15 @@ function InventoryManager() {
         setReorderedInventory(reorderedInventory => [...reorderedInventory, item]);
     }
 
+    function removeInventory(deletedItem) {
+        setReorderedInventory(reorderedInventory => reorderedInventory.filter(item => item.id!== deletedItem.id));
+    }
+
 
     return(
         <div className="container">
             <CurrentInventoryList inventory={inventory} newReorderedInventory={newReorderedInventory}/>
-            <ReorderInventoryList reorderedInventory={reorderedInventory}/>
+            <ReorderInventoryList reorderedInventory={reorderedInventory} removeInventory={removeInventory}/>
         </div>
     );
 }
