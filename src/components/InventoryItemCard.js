@@ -1,8 +1,13 @@
 import React from 'react'
 
-function InventoryItemCard({item}) {
+function InventoryItemCard({item, handleInventoryChange}) {
+
+function handleClick() {
+    handleInventoryChange(item);
+}
+
     return(
-        <div className="card" onClick={() => console.log("Clicking the item...")}>
+        <div className="card" onClick={handleClick}>
             <img src={item.image}></img>
             <h3>{item.name}</h3>
             <h4>${item.price}</h4>
