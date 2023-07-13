@@ -4,7 +4,7 @@ import InventoryItemCard from './InventoryItemCard'
 function CurrentInventoryList({inventory, newReorderedInventory}) {
 
     const inventoryItems = inventory.map(item => {
-        return <InventoryItemCard key={item.id} item={item} handleInventoryChange={newReorderedInventory}/>
+        return <InventoryItemCard key={item.id} item={item} handleInventoryChange={newReorderedInventory} />
     });
 
     return(

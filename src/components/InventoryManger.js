@@ -24,7 +24,7 @@ function InventoryManager() {
 
     return(
         <div className="container">
-            <CurrentInventoryList inventory={inventory} newReorderedInventory={newReorderedInventory}/>
+            <CurrentInventoryList inventory={inventory} newReorderedInventory={newReorderedInventory} />
             <ReorderInventoryList reorderedInventory={reorderedInventory} removeInventory={removeInventory}/>
         </div>
     );
